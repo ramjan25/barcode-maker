@@ -1,0 +1,126 @@
+body {
+    background-color: #0a0a1a; /* Very dark blue/black */
+    color: #e0e0e0; /* Light gray text */
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Grid background */
+    background-image: repeating-linear-gradient(0deg, #1a1a3a, #1a1a3a 1px, transparent 1px, transparent 20px),
+                      repeating-linear-gradient(90deg, #1a1a3a, #1a1a3a 1px, transparent 1px, transparent 20px);
+    background-size: 20px 20px;
+}
+
+.container {
+    background-color: #1a1a3a; /* Slightly lighter dark blue */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); /* Electric blue glow */
+    width: 700px;
+    border: 1px solid #00ffff; /* Subtle electric blue border */
+}
+
+h1 {
+    color: #00ffff; /* Electric blue for title */
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Text glow */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    background-color: #2a2a4a; /* Darker tab background */
+    color: #e0e0e0;
+    border: 1px solid #00bfff; /* Blue border */
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.tab-button.active {
+    background-color: #00bfff; /* Active tab electric blue */
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Active tab glow */
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #2a2a4a; /* Darker content background */
+    border-radius: 0 5px 5px 5px;
+    border: 1px solid #00bfff; /* Blue border */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #00ffff; /* Electric blue label */
+}
+
+textarea, input, select {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a3a; /* Dark input background */
+    color: #e0e0e0;
+    border: 1px solid #00bfff; /* Blue input border */
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.3); /* Inner glow */
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 15px;
+    align-items: center;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+button#generate-btn {
+    background-color: #00bfff; /* Electric blue button */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Button glow */
+}
+
+button#generate-btn:hover {
+    background-color: #00ffff; /* Lighter blue on hover */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1); /* Stronger glow on hover */
+}
+
+#barcode-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+#barcode-container svg {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}

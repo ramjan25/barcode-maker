@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Barcode Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Barcode with Ramjan Khan</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'manual')">Manual Entry</button>
+            <button class="tab-button" onclick="openTab(event, 'sequence')">Sequence Generator</button>
+        </div>
+
+        <div id="manual" class="tab-content" style="display: block;">
+            <label for="text-input">Enter or paste codes directly (one per line):</label>
+            <textarea id="text-input" rows="10"></textarea>
+        </div>
+
+        <div id="sequence" class="tab-content">
+            <div class="form-grid">
+                <label for="prefix">Prefix:</label>
+                <input type="text" id="prefix">
+
+                <label for="suffix">Suffix:</label>
+                <input type="text" id="suffix">
+
+                <label for="start">Start Value:</label>
+                <input type="number" id="start" value="1">
+
+                <label for="end">End Value:</label>
+                <input type="number" id="end" value="100">
+
+                <label for="increment">Increment:</label>
+                <input type="number" id="increment" value="1">
+            </div>
+        </div>
+
+        <div class="options">
+            <label for="barcode-type">Barcode Type:</label>
+            <select id="barcode-type">
+                 <option value="code128" selected>Code128</option>
+                <option value="code39">Code39</option>
+                <option value="ean13">EAN-13</option>
+                <option value="ean8">EAN-8</option>
+                <option value="upc">UPC</option>
+                <option value="itf">ITF</option>
+                <option value="msi">MSI</option>
+                <option value="pharmacode">Pharmacode</option>
+            </select>
+        </div>
+
+        <button id="generate-btn">Generate Barcodes</button>
+
+        <div id="barcode-container"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
